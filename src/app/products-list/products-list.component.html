@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-dark" border="1">
+                <thead>
+                    <th scope="col">Product Code</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">More Info</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of products">
+                        <td> {{ p.pcode }} </td>
+                        <td> {{ p.pdetails }} </td>
+                        <td> {{ p.price }} </td>
+                        <td> <a class="btn btn-secondary">View Details</a> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-primary"> Add Product </a>
+        </div>
+    </div>
+</div>
