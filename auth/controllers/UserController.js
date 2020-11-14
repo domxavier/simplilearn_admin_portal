@@ -3,6 +3,7 @@ const env = require('../DB')
 const jwt = require('jsonwebtoken')
 
 exports.register = function (req, res) {
+  // Take everything from request body
   const { username, email, password, passwordConfirmation } = req.body
   if (!email || !password) {
     return res.status(422).json({ 'error': 'Please provide email or password' })

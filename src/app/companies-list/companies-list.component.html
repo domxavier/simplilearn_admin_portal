@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <br><br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"> Name of the Company </th>
+                        <th scopre="col"> View Details </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of companies">
+                        <td>{{ c.name }}</td>
+                    <td>
+                        <!-- Pass on the id using hyperlink -->
+                        <a class="btn btn-primary" [routerLink]="['/view-company', { id : c._id, name : c.name}]"> View Details </a>
+                    </td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <a class="btn btn-danger" [routerLink]="['/add-company']"> Add New Company </a>
+    </div>
+</div>
+
+
+

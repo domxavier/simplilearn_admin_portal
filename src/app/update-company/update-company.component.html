@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <br>
+    </div>
+    <div class="row">
+        <form [formGroup]="companyRef" (ngSubmit)="updateCompany()">
+            <div class="form-group">
+                <label> <h4> {{ currentName }} </h4> </label>
+                <input type="text" class="form-control" id="companyName" formControlName="name" placeholder="{{ currentName }}">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Update Company">
+            </div>
+            <div *ngIf=(formSubmit)>
+                <b>Company updates successfully!</b>
+            </div>
+        </form>
+    </div>
+</div>
