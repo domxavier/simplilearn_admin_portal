@@ -16,6 +16,10 @@ import { AddCompanyComponent } from './add-company/add-company.component';
 import { UpdateCompanyComponent } from './update-company/update-company.component';
 import { DeleteCompanyComponent } from './delete-company/delete-company.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ProductsListComponent } from './products-list/products-list.component';
     AddCompanyComponent,
     UpdateCompanyComponent,
     DeleteCompanyComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    DeleteProductComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,

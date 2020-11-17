@@ -19,4 +19,20 @@ export class ProductsService {
     return this.http.get<Product[]>(this.productUrl);
   }
 
+  getProductById(id: any): Observable<Product> {
+    return this.http.get<Product>(`http://localhost:5000/api/productbyid/${id}`)
+  }
+
+  addProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.productUrl, product, httpOptions);
+  }
+
+  updateProductById(product: Product, id: any): Observable<Product> {
+    return this.http.put<Product>(`${this.productUrl}/${id}`, product, httpOptions);
+  }
+
+  deleteProductById(id: any): Observable<Product> {
+    return this.http.delete<Product>(`${this.productUrl}/${id}`)
+  }
+
 }

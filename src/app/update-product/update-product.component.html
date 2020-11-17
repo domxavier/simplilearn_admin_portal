@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-8 offset-2">
+            
+
+            <form [formGroup]="productRef" (ngSubmit)="updateProd()">
+                <div class="form-group">
+                    <label> <h4> {{ the_prod.pcode }} </h4> to </label>
+                    <input type="text" class="form-control" id="productcode" formControlName="pcode">
+                    <br>
+                    <label> <h4> {{the_prod.pname}} </h4> to </label>
+                    <input type="text" class="form-control" id="productName" formControlName="pname">
+                    <br>
+                    <label> <h4> {{the_prod.pdetails}} </h4> to </label>
+                    <input type="text" class="form-control" id="productDetails" formControlName="pdetails">
+                    <br>
+                    <label> <h4> {{the_prod.pimage}} </h4> to </label>
+                    <input type="text" class="form-control" id="productImage" formControlName="pimage">
+                    <br>
+                    <label> <h4> ${{the_prod.price}} </h4> to </label>
+                    <input type="text" class="form-control" id="productPrice" formControlName="price">
+                    <br><br>
+                    <label> <h4> {{the_comp.name}} </h4> to </label>
+                    <p>
+                        <label> Available Brands are : </label>
+                        <span *ngFor="let c of companies"> <span> {{ c.name }}, </span> </span>
+                        <label> <i> Please Fill in the below field with one of the available brands</i></label>
+                    </p>
+                    <input type="text" class="form-control" id="productCompany" formControlName="pcompany">
+                    <br>
+                
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Update Product">
+                </div>
+                <!-- <div *ngIf=(formSubmit)>
+                    <b>Product added Successfully!</b>
+                </div> -->
+            </form>
+
+
+        </div>
+    </div>
+</div>

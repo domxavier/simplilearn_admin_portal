@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+                <div class="form-group">
+                    <label> <h4> Code </h4> </label>
+                    <input type="text" class="form-control" id="productcode" formControlName="pcode">
+                    <br>
+                    <label> <h4> Name </h4> </label>
+                    <input type="text" class="form-control" id="productName" formControlName="pname">
+                    <br>
+                    <label> <h4> Details </h4> </label>
+                    <input type="text" class="form-control" id="productDetails" formControlName="pdetails">
+                    <br>
+                    <label> <h4> Image </h4> </label>
+                    <input type="text" class="form-control" id="productImage" formControlName="pimage">
+                    <br>
+                    <label> <h4> Price </h4> </label>
+                    <input type="text" class="form-control" id="productPrice" formControlName="price">
+                    <br>
+                    <label> <h4> Company </h4> </label>
+                    <p>
+                        <label> Available Brands are : </label>
+                        <span *ngFor="let c of companies"> <span> {{ c.name }}, </span> </span>
+                        <label> <i> Please Fill in the below field with one of the available brands</i></label>
+                    </p>
+                    <input type="text" class="form-control" id="productCompany" formControlName="pcompany">
+                    <br>
+                
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Add Product">
+                </div>
+                <div *ngIf=(formSubmit)>
+                    <b>Product added Successfully!</b>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
