@@ -13,8 +13,8 @@
                     <h5>Priced at  ${{ the_product.price }}</h5>
                 </div>
                 <div class="card-footer">
-                    <a class="btn btn-warning" [routerLink]="['/update-product', { id : id}]"> Update Company Name </a> | 
-                  <button class="btn btn-warning"(click)="deleteButton()"> Delete Company </button>
+                    <a class="btn btn-warning" [routerLink]="['/update-product', { id : id}]"> Update Product Name </a> | 
+                  <button class="btn btn-warning"(click)="deleteButton()"> Delete Product </button>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="col-sm-12">
             <div class="card text-white bg-danger mb-3 text-sm-center">
                 <div class="card-body">
-                    <h5 class="card-title">Are you sure you would like to delete this company from the database?</h5>
+                    <h5 class="card-title">Are you sure you would like to delete this product from the database?</h5>
                     <button class="btn btn-dark" (click)="yesDelete()"> Yes </button> |
                     <button class="btn btn-success" (click)="noDelete()"> No </button>
                 </div>

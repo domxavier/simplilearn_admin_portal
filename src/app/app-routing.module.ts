@@ -1,3 +1,6 @@
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { UsersListComponent } from './users-list/users-list.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
@@ -29,7 +32,10 @@ const routes: Routes = [
   { path : 'add-product', component : AddProductComponent, canActivate : [AuthGuard] },
   { path : 'update-product', component : UpdateProductComponent, canActivate : [AuthGuard] },
   { path : 'delete-product', component : DeleteCompanyComponent, canActivate : [AuthGuard] },
-  { path : 'view-product', component : ViewProductComponent, canActivate : [AuthGuard] }
+  { path : 'view-product', component : ViewProductComponent, canActivate : [AuthGuard] },
+  { path : 'app-users-list', component : UsersListComponent, canActivate : [AuthGuard] },
+  { path : 'update-users', component : UpdateUserComponent, canActivate : [AuthGuard] },
+  { path : 'delete-users', component : DeleteUserComponent, canActivate : [AuthGuard] }
 ];
 
 @NgModule({
