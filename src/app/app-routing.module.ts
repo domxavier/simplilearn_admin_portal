@@ -20,8 +20,8 @@ import { AuthGuard } from './auth/auth.guard';
 import { CompaniesListComponent } from './companies-list/companies-list.component';
 
 const routes: Routes = [
-  //{ path : '', component: HomeComponent },
-  { path : '', redirectTo : 'companies-list', pathMatch : 'full' },
+  { path : '', component: HomeComponent },
+  //{ path : '', redirectTo : 'companies-list', pathMatch : 'full' },
   { path : 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path : 'companies-list', component : CompaniesListComponent, canActivate : [AuthGuard] },
   { path : 'view-company', component : ViewCompanyComponent, canActivate : [AuthGuard] },
